@@ -1,3 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using console_simple_math_game;
 
-Console.WriteLine("Hello, World!");
+var menu = new Menu();
+
+var date = DateTime.UtcNow;
+
+var games = new List<string>();
+
+string name = GetName();
+
+menu.ShowMenu(name, date);
+
+string GetName() 
+{
+    Console.WriteLine("Please type your name");
+    var name = Console.ReadLine();
+    return name;
+}
+
