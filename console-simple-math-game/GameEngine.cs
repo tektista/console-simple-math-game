@@ -1,4 +1,5 @@
 namespace console_simple_math_game;
+using console_simple_math_game.Models;
 
 internal class GameEngine
 {
@@ -38,7 +39,7 @@ internal class GameEngine
             Console.ReadLine();
         }
     }
-    Helpers.AddToHistory(score, "Addition");
+    Helpers.AddToHistory(score, GameType.Addition);
 }
 
     internal void SubtractionGame(string message)
@@ -76,7 +77,7 @@ internal class GameEngine
             
         }
     }
-    Helpers.AddToHistory(score, "Subtraction");
+    Helpers.AddToHistory(score, GameType.Subtraction);
 }
 
     internal void MultiplicationGame(string message)
@@ -117,7 +118,7 @@ internal class GameEngine
             
         }
     }
-    Helpers.AddToHistory(score, "Multiplication");
+    Helpers.AddToHistory(score, GameType.Multiplication);
 }
 
     internal void DivisionGame(string message)
@@ -156,6 +157,6 @@ internal class GameEngine
         }
         
     }
-    Helpers.AddToHistory(score, "Division");
+    Helpers.AddToHistory(score, GameType.Division);
 }
 }
